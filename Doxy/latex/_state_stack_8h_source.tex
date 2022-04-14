@@ -1,0 +1,69 @@
+\hypertarget{_state_stack_8h_source}{}\doxysection{State\+Stack.\+h}
+\label{_state_stack_8h_source}\index{C:/Users/david/Downloads/GAME\_3015\_Final\_Project-\/main/GAME\_3015\_Final\_Project-\/main/EngineProject/EngineProject/StateStack.h@{C:/Users/david/Downloads/GAME\_3015\_Final\_Project-\/main/GAME\_3015\_Final\_Project-\/main/EngineProject/EngineProject/StateStack.h}}
+\mbox{\hyperlink{_state_stack_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_state_8h}{State.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_state_stack}{StateStack}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{11     \textcolor{keyword}{enum} \mbox{\hyperlink{class_state_stack_af804142a55cd477767353e0abbcc218c}{Action}}}
+\DoxyCodeLine{12     \{}
+\DoxyCodeLine{13         \mbox{\hyperlink{class_state_stack_af804142a55cd477767353e0abbcc218ca5145d891d6770f76760d0b17cdfec0ab}{Push}},}
+\DoxyCodeLine{14         \mbox{\hyperlink{class_state_stack_af804142a55cd477767353e0abbcc218cada9c92031672d7627190e17bf881889a}{Pop}},}
+\DoxyCodeLine{15         \mbox{\hyperlink{class_state_stack_af804142a55cd477767353e0abbcc218cad2ef458a00c740b8bf761d90da84bc89}{Clear}}}
+\DoxyCodeLine{16     \};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_state_stack_a365f29afd04a9370f6638cbe3b4ff92a}{StateStack}}(\mbox{\hyperlink{struct_state_1_1_context}{State::Context}} context);}
+\DoxyCodeLine{21     }
+\DoxyCodeLine{22     \textcolor{comment}{// template for registering a state}}
+\DoxyCodeLine{23     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_stack_a9d64daa479c2cccad6f2ede77741a352}{registerState}}(\mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3}{States::ID}} stateID)}
+\DoxyCodeLine{25     \{}
+\DoxyCodeLine{26         \mbox{\hyperlink{class_state_stack_a11e5cb30b0312d7ff2d710873ad8d833}{mFactories}}[stateID] = [\textcolor{keyword}{this}]()}
+\DoxyCodeLine{27         \{}
+\DoxyCodeLine{28             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_state_a71d9930be1a58be7f711e245b7965d48}{State::Ptr}}(\textcolor{keyword}{new} T(\textcolor{keyword}{this}, \&\mbox{\hyperlink{class_state_stack_aee21cfab45bfb22286308a0a170c8889}{mContext}}));}
+\DoxyCodeLine{29         \};}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_stack_a22c2b84575447cdcfe7fef102cb90847}{update}}(\textcolor{keyword}{const} GameTimer\& gt);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_stack_a0990b973b2a0bdf8fad2f326e564931a}{draw}}();}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_stack_aee3afbf537b3360cdf0513a048fc9a91}{UpdateStateObjectCB}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{comment}{// state manipulation}}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_stack_a2aaf58dc12670915350c89938fc555b6}{pushState}}(\mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3}{States::ID}});}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_stack_a7e050a57b798295c2344f1318765b5ee}{popState}}();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_stack_a49f0703d4037c3bf63494e64cb09898d}{clearStates}}();}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_stack_a2a6df2bdf1d3edfb12f09fbb1dfbf67d}{handleEvent}}(WPARAM btnState);}
+\DoxyCodeLine{41     \textcolor{comment}{// determine if stack empty}}
+\DoxyCodeLine{42     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_state_stack_a4d9dc16e1a69640b6a85c224fe1c3f33}{isEmpty}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \mbox{\hyperlink{struct_state_1_1_context}{State::Context}} \mbox{\hyperlink{class_state_stack_aee21cfab45bfb22286308a0a170c8889}{mContext}};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{private}:}
+\DoxyCodeLine{47     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_state_stack_1_1_pending_change}{PendingChange}}}
+\DoxyCodeLine{48     \{}
+\DoxyCodeLine{49         \textcolor{keyword}{explicit} \mbox{\hyperlink{struct_state_stack_1_1_pending_change_adf295f13761e75276203d45bd34d984a}{PendingChange}}(\mbox{\hyperlink{class_state_stack_af804142a55cd477767353e0abbcc218c}{Action}} \mbox{\hyperlink{struct_state_stack_1_1_pending_change_a58fbc70279f2e72713293808bbabea08}{action}}, \mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3}{States::ID}} \mbox{\hyperlink{struct_state_stack_1_1_pending_change_a89163ace43e51d5ce8909e8be1e44c5b}{stateID}} = \mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3ae18ebe696f4559ff77e50030089b4787}{States::None}});}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \mbox{\hyperlink{class_state_stack_af804142a55cd477767353e0abbcc218c}{Action}} \mbox{\hyperlink{struct_state_stack_1_1_pending_change_a58fbc70279f2e72713293808bbabea08}{action}};}
+\DoxyCodeLine{52         \mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3}{States::ID}} \mbox{\hyperlink{struct_state_stack_1_1_pending_change_a89163ace43e51d5ce8909e8be1e44c5b}{stateID}};}
+\DoxyCodeLine{53     \};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \mbox{\hyperlink{class_state_a71d9930be1a58be7f711e245b7965d48}{State::Ptr}} \mbox{\hyperlink{class_state_stack_aabbec58df957956143a19e1a9ae6d9a2}{createState}}(\mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3}{States::ID}} stateID);}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_stack_af664f95954b4621175c9fc0f9d30fdf0}{StateStack::applyPendingChanges}}();}
+\DoxyCodeLine{57     }
+\DoxyCodeLine{58     std::vector<State::Ptr> \mbox{\hyperlink{class_state_stack_af56e0396b962c8f2bb5d11ae1b58f357}{mStack}};}
+\DoxyCodeLine{59     std::vector<PendingChange> \mbox{\hyperlink{class_state_stack_a90683aa781e7c898bb5f75a5eb3908be}{mPendingList}};}
+\DoxyCodeLine{60     std::map<\mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3}{States::ID}}, std::function<\mbox{\hyperlink{class_state_a71d9930be1a58be7f711e245b7965d48}{State::Ptr}}()>> \mbox{\hyperlink{class_state_stack_a11e5cb30b0312d7ff2d710873ad8d833}{mFactories}};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \};}
+\DoxyCodeLine{63 }
+
+\end{DoxyCode}

@@ -1,0 +1,52 @@
+\hypertarget{_command_queue_8h_source}{}\doxysection{Command\+Queue.\+h}
+\label{_command_queue_8h_source}\index{C:/Users/david/Downloads/GAME\_3015\_Final\_Project-\/main/GAME\_3015\_Final\_Project-\/main/EngineProject/EngineProject/CommandQueue.h@{C:/Users/david/Downloads/GAME\_3015\_Final\_Project-\/main/GAME\_3015\_Final\_Project-\/main/EngineProject/EngineProject/CommandQueue.h}}
+\mbox{\hyperlink{_command_queue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <Queue>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_scene_node_8h}{SceneNode.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_command}{Command}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \mbox{\hyperlink{struct_command_ac3717e409ad40cc49776e4b2f5d8d3db}{Command}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{comment}{// command name}}
+\DoxyCodeLine{13     std::string \mbox{\hyperlink{struct_command_a8d66550a9895cbd96373a9a221fa2b25}{name}};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{comment}{// lambda function for command}}
+\DoxyCodeLine{16     std::function<void(\mbox{\hyperlink{class_scene_node}{SceneNode}}\&, \textcolor{keyword}{const} GameTimer\& gt)> \mbox{\hyperlink{struct_command_a8e15283694f26e5a252a57f58fad4d25}{action}};}
+\DoxyCodeLine{17     }
+\DoxyCodeLine{18     \textcolor{comment}{// command category}}
+\DoxyCodeLine{19     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_command_a1529e898c9e6dd47b1826b5b1eac09fb}{category}} = NULL;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{comment}{// define if command is a realtime action}}
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_command_a9576ef7e8d859f9942cc5d1eb93c4427}{isRealtimeAction}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{class }\mbox{\hyperlink{class_command_queue}{CommandQueue}}}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{comment}{// push commands into the command queue}}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_command_queue_a9db4b5b03a12894bc5fd718729af1bea}{push}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_command}{Command}} newCommand);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{comment}{// remove commands from the command queue}}
+\DoxyCodeLine{35     \mbox{\hyperlink{struct_command}{Command}} \mbox{\hyperlink{class_command_queue_ac2dde510222b8df393b55978f4594194}{pop}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{comment}{// return if queue is empty}}
+\DoxyCodeLine{38     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_command_queue_a3a6eb6a7c83d9b20ad7a6cac63795ec1}{isEmpty}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{keyword}{private}:}
+\DoxyCodeLine{42     \textcolor{comment}{// FIFO queue for commands}}
+\DoxyCodeLine{43     std::queue<Command> \mbox{\hyperlink{class_command_queue_a0d18127b51634d3a2c2b581f164f52d4}{mQueue}};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+
+\end{DoxyCode}

@@ -1,0 +1,178 @@
+\hypertarget{class_player}{}\doxysection{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_player_1_1_aircraft_mover}{Aircraft\+Mover}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
+\item 
+void \mbox{\hyperlink{class_player_abdabbfe5ce0c04acf504ff5054dbcbc1}{handle\+Event}} (\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&commands)
+\item 
+void \mbox{\hyperlink{class_player_ac520744c103fb38763c8856b4f158627}{handle\+Realtime\+Input}} (\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&commands)
+\item 
+void \mbox{\hyperlink{class_player_af8c0b2c6a04e0e074355e4c53818e0b8}{assign\+Key}} (\mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88}{Action}} action, int key)
+\item 
+std\+::string \mbox{\hyperlink{class_player_aea50efe2730c0ea39c8b6b23efe2240b}{get\+Assigned\+Key}} (\mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88}{Action}} action) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{class_player_a96abeb40b95dab02ceda64f8b974e954}{player\+Speed}} = 0.\+001f
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88}{Action}} \{ \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88a0166b28e57a9a8553a603a4c0fbe5807}{Move\+Left}}
+, \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88aa89dbd9060b77566a66b115531df631b}{Move\+Right}}
+, \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88a87902fdc759f9fb7ddeb79277bd1c337}{Move\+Forward}}
+, \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88a585d8dee92ae2bcc6211a9906d2b0e35}{Move\+Backward}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_player_a164162d195f7a532244b06d43d89a387}{is\+Realtime\+Action}} (\mbox{\hyperlink{struct_command}{Command}} command)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ int, \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88}{Action}} $>$ \mbox{\hyperlink{class_player_a2f56acba4afb6295afffd15b12f35a78}{m\+Key\+Binding}}
+\item 
+std\+::map$<$ \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88}{Action}}, \mbox{\hyperlink{struct_command}{Command}} $>$ \mbox{\hyperlink{class_player_a66a22f216029822a0ea076ef0151b5bb}{m\+Action\+Binding}}
+\item 
+\mbox{\hyperlink{struct_command}{Command}} \mbox{\hyperlink{class_player_ab74f1955df11bd40f0f283d6a34d6977}{move\+Left}}
+\item 
+\mbox{\hyperlink{struct_command}{Command}} \mbox{\hyperlink{class_player_a50d59992cb1975b1f83842f8a5a41b3d}{move\+Right}}
+\item 
+\mbox{\hyperlink{struct_command}{Command}} \mbox{\hyperlink{class_player_a1e9a3a6fecca6721c4796e7df554804f}{move\+Forward}}
+\item 
+\mbox{\hyperlink{struct_command}{Command}} \mbox{\hyperlink{class_player_a455125d3e6f8603cb5da6335e5027f70}{move\+Backward}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_player_a2da5df212d083bbb1460237f34ab0d88}\label{class_player_a2da5df212d083bbb1460237f34ab0d88}} 
+\index{Player@{Player}!Action@{Action}}
+\index{Action@{Action}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Action}{Action}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88}{Player\+::\+Action}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MoveLeft@{MoveLeft}!Player@{Player}}\index{Player@{Player}!MoveLeft@{MoveLeft}}}\mbox{\Hypertarget{class_player_a2da5df212d083bbb1460237f34ab0d88a0166b28e57a9a8553a603a4c0fbe5807}\label{class_player_a2da5df212d083bbb1460237f34ab0d88a0166b28e57a9a8553a603a4c0fbe5807}} 
+Move\+Left&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MoveRight@{MoveRight}!Player@{Player}}\index{Player@{Player}!MoveRight@{MoveRight}}}\mbox{\Hypertarget{class_player_a2da5df212d083bbb1460237f34ab0d88aa89dbd9060b77566a66b115531df631b}\label{class_player_a2da5df212d083bbb1460237f34ab0d88aa89dbd9060b77566a66b115531df631b}} 
+Move\+Right&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MoveForward@{MoveForward}!Player@{Player}}\index{Player@{Player}!MoveForward@{MoveForward}}}\mbox{\Hypertarget{class_player_a2da5df212d083bbb1460237f34ab0d88a87902fdc759f9fb7ddeb79277bd1c337}\label{class_player_a2da5df212d083bbb1460237f34ab0d88a87902fdc759f9fb7ddeb79277bd1c337}} 
+Move\+Forward&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MoveBackward@{MoveBackward}!Player@{Player}}\index{Player@{Player}!MoveBackward@{MoveBackward}}}\mbox{\Hypertarget{class_player_a2da5df212d083bbb1460237f34ab0d88a585d8dee92ae2bcc6211a9906d2b0e35}\label{class_player_a2da5df212d083bbb1460237f34ab0d88a585d8dee92ae2bcc6211a9906d2b0e35}} 
+Move\+Backward&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}\label{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_af8c0b2c6a04e0e074355e4c53818e0b8}\label{class_player_af8c0b2c6a04e0e074355e4c53818e0b8}} 
+\index{Player@{Player}!assignKey@{assignKey}}
+\index{assignKey@{assignKey}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{assignKey()}{assignKey()}}
+{\footnotesize\ttfamily void Player\+::assign\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88}{Action}}}]{action,  }\item[{int}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_aea50efe2730c0ea39c8b6b23efe2240b}\label{class_player_aea50efe2730c0ea39c8b6b23efe2240b}} 
+\index{Player@{Player}!getAssignedKey@{getAssignedKey}}
+\index{getAssignedKey@{getAssignedKey}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getAssignedKey()}{getAssignedKey()}}
+{\footnotesize\ttfamily std\+::string Player\+::get\+Assigned\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88}{Action}}}]{action }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_player_abdabbfe5ce0c04acf504ff5054dbcbc1}\label{class_player_abdabbfe5ce0c04acf504ff5054dbcbc1}} 
+\index{Player@{Player}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}}
+{\footnotesize\ttfamily void Player\+::handle\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&}]{commands }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_ac520744c103fb38763c8856b4f158627}\label{class_player_ac520744c103fb38763c8856b4f158627}} 
+\index{Player@{Player}!handleRealtimeInput@{handleRealtimeInput}}
+\index{handleRealtimeInput@{handleRealtimeInput}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{handleRealtimeInput()}{handleRealtimeInput()}}
+{\footnotesize\ttfamily void Player\+::handle\+Realtime\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&}]{commands }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a164162d195f7a532244b06d43d89a387}\label{class_player_a164162d195f7a532244b06d43d89a387}} 
+\index{Player@{Player}!isRealtimeAction@{isRealtimeAction}}
+\index{isRealtimeAction@{isRealtimeAction}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{isRealtimeAction()}{isRealtimeAction()}}
+{\footnotesize\ttfamily bool Player\+::is\+Realtime\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_command}{Command}}}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_a66a22f216029822a0ea076ef0151b5bb}\label{class_player_a66a22f216029822a0ea076ef0151b5bb}} 
+\index{Player@{Player}!mActionBinding@{mActionBinding}}
+\index{mActionBinding@{mActionBinding}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{mActionBinding}{mActionBinding}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88}{Action}}, \mbox{\hyperlink{struct_command}{Command}}$>$ Player\+::m\+Action\+Binding\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_a2f56acba4afb6295afffd15b12f35a78}\label{class_player_a2f56acba4afb6295afffd15b12f35a78}} 
+\index{Player@{Player}!mKeyBinding@{mKeyBinding}}
+\index{mKeyBinding@{mKeyBinding}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{mKeyBinding}{mKeyBinding}}
+{\footnotesize\ttfamily std\+::map$<$int, \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88}{Action}}$>$ Player\+::m\+Key\+Binding\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_a455125d3e6f8603cb5da6335e5027f70}\label{class_player_a455125d3e6f8603cb5da6335e5027f70}} 
+\index{Player@{Player}!moveBackward@{moveBackward}}
+\index{moveBackward@{moveBackward}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{moveBackward}{moveBackward}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_command}{Command}} Player\+::move\+Backward\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_a1e9a3a6fecca6721c4796e7df554804f}\label{class_player_a1e9a3a6fecca6721c4796e7df554804f}} 
+\index{Player@{Player}!moveForward@{moveForward}}
+\index{moveForward@{moveForward}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{moveForward}{moveForward}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_command}{Command}} Player\+::move\+Forward\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_ab74f1955df11bd40f0f283d6a34d6977}\label{class_player_ab74f1955df11bd40f0f283d6a34d6977}} 
+\index{Player@{Player}!moveLeft@{moveLeft}}
+\index{moveLeft@{moveLeft}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{moveLeft}{moveLeft}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_command}{Command}} Player\+::move\+Left\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_a50d59992cb1975b1f83842f8a5a41b3d}\label{class_player_a50d59992cb1975b1f83842f8a5a41b3d}} 
+\index{Player@{Player}!moveRight@{moveRight}}
+\index{moveRight@{moveRight}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{moveRight}{moveRight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_command}{Command}} Player\+::move\+Right\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_a96abeb40b95dab02ceda64f8b974e954}\label{class_player_a96abeb40b95dab02ceda64f8b974e954}} 
+\index{Player@{Player}!playerSpeed@{playerSpeed}}
+\index{playerSpeed@{playerSpeed}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{playerSpeed}{playerSpeed}}
+{\footnotesize\ttfamily const float Player\+::player\+Speed = 0.\+001f}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/david/\+Downloads/\+GAME\+\_\+3015\+\_\+\+Final\+\_\+\+Project-\/main/\+GAME\+\_\+3015\+\_\+\+Final\+\_\+\+Project-\/main/\+Engine\+Project/\+Engine\+Project/\mbox{\hyperlink{_player_8h}{Player.\+h}}\item 
+C\+:/\+Users/david/\+Downloads/\+GAME\+\_\+3015\+\_\+\+Final\+\_\+\+Project-\/main/\+GAME\+\_\+3015\+\_\+\+Final\+\_\+\+Project-\/main/\+Engine\+Project/\+Engine\+Project/\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

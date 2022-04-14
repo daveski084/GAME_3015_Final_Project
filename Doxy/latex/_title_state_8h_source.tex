@@ -1,0 +1,31 @@
+\hypertarget{_title_state_8h_source}{}\doxysection{Title\+State.\+h}
+\label{_title_state_8h_source}\index{C:/Users/david/Downloads/GAME\_3015\_Final\_Project-\/main/GAME\_3015\_Final\_Project-\/main/EngineProject/EngineProject/TitleState.h@{C:/Users/david/Downloads/GAME\_3015\_Final\_Project-\/main/GAME\_3015\_Final\_Project-\/main/EngineProject/EngineProject/TitleState.h}}
+\mbox{\hyperlink{_title_state_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_state_8h}{State.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_player_8h}{Player.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_world_8h}{World.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_title_state}{TitleState}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_state}{State}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_title_state_aad68d2a0aece65492974d3ee448ff71f}{TitleState}}(\mbox{\hyperlink{class_state_stack}{StateStack}}* stack, \mbox{\hyperlink{struct_state_1_1_context}{Context}}* context);}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_title_state_ae12beafe5aad6929a56089942de1220e}{draw}}();}
+\DoxyCodeLine{14     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_title_state_a26db23a9e13dcd488d0a550024aa67a0}{update}}(\textcolor{keyword}{const} GameTimer\& gt);}
+\DoxyCodeLine{15     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_title_state_af599217999e2373896f4441dcfb4b78b}{handleEvent}}(WPARAM btnState);}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     std::string \mbox{\hyperlink{class_title_state_aff024bcd74a709a4a4d85854e6bfde7b}{TitleTextureName}} = \textcolor{stringliteral}{"{}Title"{}};}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_title_sprite}{TitleSprite}}* \mbox{\hyperlink{class_title_state_a901d0de74bb4b487bd6425312619aabe}{bg}};}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_title_sprite}{TitleSprite}}* \mbox{\hyperlink{class_title_state_ad7025528c663dd556b01ff7877e30a2f}{bg2}};}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_title_sprite}{TitleSprite}}* \mbox{\hyperlink{class_title_state_afc14b01c61d9573f9431bfbcc7514ecf}{bg3}};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \};}
+\DoxyCodeLine{25 }
+
+\end{DoxyCode}

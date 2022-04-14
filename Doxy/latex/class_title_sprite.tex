@@ -1,0 +1,104 @@
+\hypertarget{class_title_sprite}{}\doxysection{Title\+Sprite Class Reference}
+\label{class_title_sprite}\index{TitleSprite@{TitleSprite}}
+
+
+{\ttfamily \#include $<$Title\+Sprite.\+h$>$}
+
+Inheritance diagram for Title\+Sprite\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_title_sprite}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_title_sprite_a3b78950665db13352a49129bdd76bdb9}{Title\+Sprite}} (\mbox{\hyperlink{class_state}{State}} $\ast$state)
+\item 
+void \mbox{\hyperlink{class_title_sprite_ae4d3ed8abb6be21956254bd0694d2528}{Update}} (const Game\+Timer gt)
+\item 
+void \mbox{\hyperlink{class_title_sprite_a6dbf3325099d735a9444b8d97c9b44d8}{Update\+With\+Cmd}} (\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&commands)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_title_sprite_aedadaf5942e206e25b8f8e6f976a7c2b}{Texture\+Name}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_title_sprite_a16d77c6fbba3dd7d3683cd6198fddfe8}{draw\+Current}} () const
+\item 
+virtual void \mbox{\hyperlink{class_title_sprite_af702edec70e66b9b6bffe1eecce7b1e4}{build\+Current}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_render_item}{Render\+Item}} $>$ \mbox{\hyperlink{class_title_sprite_ae1db45352ef564e93425ce6692bfd727}{Sprite\+Renderer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_title_sprite_a3b78950665db13352a49129bdd76bdb9}\label{class_title_sprite_a3b78950665db13352a49129bdd76bdb9}} 
+\index{TitleSprite@{TitleSprite}!TitleSprite@{TitleSprite}}
+\index{TitleSprite@{TitleSprite}!TitleSprite@{TitleSprite}}
+\doxysubsubsection{\texorpdfstring{TitleSprite()}{TitleSprite()}}
+{\footnotesize\ttfamily Title\+Sprite\+::\+Title\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_state}{State}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_title_sprite_af702edec70e66b9b6bffe1eecce7b1e4}\label{class_title_sprite_af702edec70e66b9b6bffe1eecce7b1e4}} 
+\index{TitleSprite@{TitleSprite}!buildCurrent@{buildCurrent}}
+\index{buildCurrent@{buildCurrent}!TitleSprite@{TitleSprite}}
+\doxysubsubsection{\texorpdfstring{buildCurrent()}{buildCurrent()}}
+{\footnotesize\ttfamily void Title\+Sprite\+::build\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_scene_node_af79c6134a7706a5901c7742b5f735956}{Scene\+Node}}.
+
+\mbox{\Hypertarget{class_title_sprite_a16d77c6fbba3dd7d3683cd6198fddfe8}\label{class_title_sprite_a16d77c6fbba3dd7d3683cd6198fddfe8}} 
+\index{TitleSprite@{TitleSprite}!drawCurrent@{drawCurrent}}
+\index{drawCurrent@{drawCurrent}!TitleSprite@{TitleSprite}}
+\doxysubsubsection{\texorpdfstring{drawCurrent()}{drawCurrent()}}
+{\footnotesize\ttfamily void Title\+Sprite\+::draw\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_scene_node_a0d7d32b925dde5ed087f112774a044b8}{Scene\+Node}}.
+
+\mbox{\Hypertarget{class_title_sprite_ae4d3ed8abb6be21956254bd0694d2528}\label{class_title_sprite_ae4d3ed8abb6be21956254bd0694d2528}} 
+\index{TitleSprite@{TitleSprite}!Update@{Update}}
+\index{Update@{Update}!TitleSprite@{TitleSprite}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Title\+Sprite\+::\+Update (\begin{DoxyParamCaption}\item[{const Game\+Timer}]{gt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_title_sprite_a6dbf3325099d735a9444b8d97c9b44d8}\label{class_title_sprite_a6dbf3325099d735a9444b8d97c9b44d8}} 
+\index{TitleSprite@{TitleSprite}!UpdateWithCmd@{UpdateWithCmd}}
+\index{UpdateWithCmd@{UpdateWithCmd}!TitleSprite@{TitleSprite}}
+\doxysubsubsection{\texorpdfstring{UpdateWithCmd()}{UpdateWithCmd()}}
+{\footnotesize\ttfamily void Title\+Sprite\+::\+Update\+With\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&}]{commands }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_title_sprite_ae1db45352ef564e93425ce6692bfd727}\label{class_title_sprite_ae1db45352ef564e93425ce6692bfd727}} 
+\index{TitleSprite@{TitleSprite}!SpriteRenderer@{SpriteRenderer}}
+\index{SpriteRenderer@{SpriteRenderer}!TitleSprite@{TitleSprite}}
+\doxysubsubsection{\texorpdfstring{SpriteRenderer}{SpriteRenderer}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{struct_render_item}{Render\+Item}}$>$ Title\+Sprite\+::\+Sprite\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_title_sprite_aedadaf5942e206e25b8f8e6f976a7c2b}\label{class_title_sprite_aedadaf5942e206e25b8f8e6f976a7c2b}} 
+\index{TitleSprite@{TitleSprite}!TextureName@{TextureName}}
+\index{TextureName@{TextureName}!TitleSprite@{TitleSprite}}
+\doxysubsubsection{\texorpdfstring{TextureName}{TextureName}}
+{\footnotesize\ttfamily std\+::string Title\+Sprite\+::\+Texture\+Name}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/david/\+Downloads/\+GAME\+\_\+3015\+\_\+\+Final\+\_\+\+Project-\/main/\+GAME\+\_\+3015\+\_\+\+Final\+\_\+\+Project-\/main/\+Engine\+Project/\+Engine\+Project/\mbox{\hyperlink{_title_sprite_8h}{Title\+Sprite.\+h}}\item 
+C\+:/\+Users/david/\+Downloads/\+GAME\+\_\+3015\+\_\+\+Final\+\_\+\+Project-\/main/\+GAME\+\_\+3015\+\_\+\+Final\+\_\+\+Project-\/main/\+Engine\+Project/\+Engine\+Project/\mbox{\hyperlink{_title_sprite_8cpp}{Title\+Sprite.\+cpp}}\end{DoxyCompactItemize}

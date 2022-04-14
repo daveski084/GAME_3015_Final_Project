@@ -1,0 +1,114 @@
+\hypertarget{class_sprite_node}{}\doxysection{Sprite\+Node Class Reference}
+\label{class_sprite_node}\index{SpriteNode@{SpriteNode}}
+
+
+{\ttfamily \#include $<$Sprite\+Node.\+h$>$}
+
+Inheritance diagram for Sprite\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sprite_node}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_sprite_node_1_1_b_g_mover}{BGMover}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sprite_node_af5884dfe335abba3c8bda2b26a6dddbb}{Sprite\+Node}} (\mbox{\hyperlink{class_state}{State}} $\ast$state)
+\item 
+void \mbox{\hyperlink{class_sprite_node_a123091dc0682bdffaeffe1b765ee20d3}{Update}} (const Game\+Timer gt)
+\item 
+void \mbox{\hyperlink{class_sprite_node_a237ab4cffda91e6975138ed60c265cf9}{Update\+With\+Cmd}} (\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&commands)
+\item 
+void \mbox{\hyperlink{class_sprite_node_a950c6c25ca3032c2533cc4053013c4ec}{Custom\+Build\+Current}} (std\+::string material, std\+::string geometry, std\+::string shape)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_sprite_node_a3331ad2945e164322796e8a75c3fc5e2}{background\+Speed}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_render_item}{Render\+Item}} $>$ \mbox{\hyperlink{class_sprite_node_ad7653a4bcf1d7c5f0ca53af665451d39}{Sprite\+Renderer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_sprite_node_af2b08010aaf9f08d6dff3bef56878664}{draw\+Current}} () const
+\item 
+virtual void \mbox{\hyperlink{class_sprite_node_a2462cdafea4b33c9ccabbf4f2e5a6a7d}{build\+Current}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sprite_node_af5884dfe335abba3c8bda2b26a6dddbb}\label{class_sprite_node_af5884dfe335abba3c8bda2b26a6dddbb}} 
+\index{SpriteNode@{SpriteNode}!SpriteNode@{SpriteNode}}
+\index{SpriteNode@{SpriteNode}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{SpriteNode()}{SpriteNode()}}
+{\footnotesize\ttfamily Sprite\+Node\+::\+Sprite\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_state}{State}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sprite_node_a2462cdafea4b33c9ccabbf4f2e5a6a7d}\label{class_sprite_node_a2462cdafea4b33c9ccabbf4f2e5a6a7d}} 
+\index{SpriteNode@{SpriteNode}!buildCurrent@{buildCurrent}}
+\index{buildCurrent@{buildCurrent}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{buildCurrent()}{buildCurrent()}}
+{\footnotesize\ttfamily void Sprite\+Node\+::build\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_scene_node_af79c6134a7706a5901c7742b5f735956}{Scene\+Node}}.
+
+\mbox{\Hypertarget{class_sprite_node_a950c6c25ca3032c2533cc4053013c4ec}\label{class_sprite_node_a950c6c25ca3032c2533cc4053013c4ec}} 
+\index{SpriteNode@{SpriteNode}!CustomBuildCurrent@{CustomBuildCurrent}}
+\index{CustomBuildCurrent@{CustomBuildCurrent}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{CustomBuildCurrent()}{CustomBuildCurrent()}}
+{\footnotesize\ttfamily void Sprite\+Node\+::\+Custom\+Build\+Current (\begin{DoxyParamCaption}\item[{std\+::string}]{material,  }\item[{std\+::string}]{geometry,  }\item[{std\+::string}]{shape }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_sprite_node_af2b08010aaf9f08d6dff3bef56878664}\label{class_sprite_node_af2b08010aaf9f08d6dff3bef56878664}} 
+\index{SpriteNode@{SpriteNode}!drawCurrent@{drawCurrent}}
+\index{drawCurrent@{drawCurrent}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{drawCurrent()}{drawCurrent()}}
+{\footnotesize\ttfamily void Sprite\+Node\+::draw\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_scene_node_a0d7d32b925dde5ed087f112774a044b8}{Scene\+Node}}.
+
+\mbox{\Hypertarget{class_sprite_node_a123091dc0682bdffaeffe1b765ee20d3}\label{class_sprite_node_a123091dc0682bdffaeffe1b765ee20d3}} 
+\index{SpriteNode@{SpriteNode}!Update@{Update}}
+\index{Update@{Update}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Sprite\+Node\+::\+Update (\begin{DoxyParamCaption}\item[{const Game\+Timer}]{gt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_sprite_node_a237ab4cffda91e6975138ed60c265cf9}\label{class_sprite_node_a237ab4cffda91e6975138ed60c265cf9}} 
+\index{SpriteNode@{SpriteNode}!UpdateWithCmd@{UpdateWithCmd}}
+\index{UpdateWithCmd@{UpdateWithCmd}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{UpdateWithCmd()}{UpdateWithCmd()}}
+{\footnotesize\ttfamily void Sprite\+Node\+::\+Update\+With\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&}]{commands }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sprite_node_a3331ad2945e164322796e8a75c3fc5e2}\label{class_sprite_node_a3331ad2945e164322796e8a75c3fc5e2}} 
+\index{SpriteNode@{SpriteNode}!backgroundSpeed@{backgroundSpeed}}
+\index{backgroundSpeed@{backgroundSpeed}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{backgroundSpeed}{backgroundSpeed}}
+{\footnotesize\ttfamily float Sprite\+Node\+::background\+Speed}
+
+\mbox{\Hypertarget{class_sprite_node_ad7653a4bcf1d7c5f0ca53af665451d39}\label{class_sprite_node_ad7653a4bcf1d7c5f0ca53af665451d39}} 
+\index{SpriteNode@{SpriteNode}!SpriteRenderer@{SpriteRenderer}}
+\index{SpriteRenderer@{SpriteRenderer}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{SpriteRenderer}{SpriteRenderer}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{struct_render_item}{Render\+Item}}$>$ Sprite\+Node\+::\+Sprite\+Renderer}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/david/\+Downloads/\+GAME\+\_\+3015\+\_\+\+Final\+\_\+\+Project-\/main/\+GAME\+\_\+3015\+\_\+\+Final\+\_\+\+Project-\/main/\+Engine\+Project/\+Engine\+Project/\mbox{\hyperlink{_sprite_node_8h}{Sprite\+Node.\+h}}\item 
+C\+:/\+Users/david/\+Downloads/\+GAME\+\_\+3015\+\_\+\+Final\+\_\+\+Project-\/main/\+GAME\+\_\+3015\+\_\+\+Final\+\_\+\+Project-\/main/\+Engine\+Project/\+Engine\+Project/\mbox{\hyperlink{_sprite_node_8cpp}{Sprite\+Node.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\hypertarget{_player_8h_source}{}\doxysection{Player.\+h}
+\label{_player_8h_source}\index{C:/Users/david/Downloads/GAME\_3015\_Final\_Project-\/main/GAME\_3015\_Final\_Project-\/main/EngineProject/EngineProject/Player.h@{C:/Users/david/Downloads/GAME\_3015\_Final\_Project-\/main/GAME\_3015\_Final\_Project-\/main/EngineProject/EngineProject/Player.h}}
+\mbox{\hyperlink{_player_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_command_queue_8h}{CommandQueue.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_aircraft_8h}{Aircraft.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_world_8h}{World.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_player}{Player}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     }
+\DoxyCodeLine{11     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_player_1_1_aircraft_mover}{AircraftMover}}}
+\DoxyCodeLine{12     \{}
+\DoxyCodeLine{13         XMFLOAT3 \mbox{\hyperlink{struct_player_1_1_aircraft_mover_a5443259c5e1eecd4fef07300612d7f17}{velocity}};}
+\DoxyCodeLine{14         }
+\DoxyCodeLine{15         \mbox{\hyperlink{struct_player_1_1_aircraft_mover_a1ddc35aabb315f19b29d86a517a1d25a}{AircraftMover}}(\textcolor{keywordtype}{float} vx, \textcolor{keywordtype}{float} vy, \textcolor{keywordtype}{float} vz) : \mbox{\hyperlink{struct_player_1_1_aircraft_mover_a5443259c5e1eecd4fef07300612d7f17}{velocity}}(vx, vy, vz)}
+\DoxyCodeLine{16         \{}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18         \}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20         \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_player_1_1_aircraft_mover_afc6962a3b3c536ccba07b74eb613373c}{operator() }}(\mbox{\hyperlink{class_scene_node}{SceneNode}}\& node, \textcolor{keyword}{const} GameTimer\& gt) }
+\DoxyCodeLine{21         \{}
+\DoxyCodeLine{22             \mbox{\hyperlink{class_aircraft}{Aircraft}}\& aircraft = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{class_aircraft}{Aircraft}}\&\textcolor{keyword}{>}(node);}
+\DoxyCodeLine{23             aircraft.\mbox{\hyperlink{class_scene_node_aec657f40def4be5c901192ec85027a35}{move}}(\mbox{\hyperlink{struct_player_1_1_aircraft_mover_a5443259c5e1eecd4fef07300612d7f17}{velocity}});}
+\DoxyCodeLine{24         \}        }
+\DoxyCodeLine{25     \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27    }
+\DoxyCodeLine{28     \textcolor{keyword}{enum} \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88}{Action}}}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88a0166b28e57a9a8553a603a4c0fbe5807}{MoveLeft}},}
+\DoxyCodeLine{31         \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88aa89dbd9060b77566a66b115531df631b}{MoveRight}},}
+\DoxyCodeLine{32         \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88a87902fdc759f9fb7ddeb79277bd1c337}{MoveForward}},}
+\DoxyCodeLine{33         \mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88a585d8dee92ae2bcc6211a9906d2b0e35}{MoveBackward}}}
+\DoxyCodeLine{34     \};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{public}:}
+\DoxyCodeLine{38     \mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}}();}
+\DoxyCodeLine{39     }
+\DoxyCodeLine{40     \textcolor{keyword}{const} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_player_a96abeb40b95dab02ceda64f8b974e954}{playerSpeed}} = 0.001f;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_abdabbfe5ce0c04acf504ff5054dbcbc1}{handleEvent}}(\mbox{\hyperlink{class_command_queue}{CommandQueue}}\& commands);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_ac520744c103fb38763c8856b4f158627}{handleRealtimeInput}}(\mbox{\hyperlink{class_command_queue}{CommandQueue}}\& commands);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_af8c0b2c6a04e0e074355e4c53818e0b8}{assignKey}}(\mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88}{Action}} action, \textcolor{keywordtype}{int} key);}
+\DoxyCodeLine{45     }
+\DoxyCodeLine{46     std::string \mbox{\hyperlink{class_player_aea50efe2730c0ea39c8b6b23efe2240b}{getAssignedKey}}(\mbox{\hyperlink{class_player_a2da5df212d083bbb1460237f34ab0d88}{Action}} action) \textcolor{keyword}{const};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keyword}{private}:}
+\DoxyCodeLine{49    }
+\DoxyCodeLine{50     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_player_a164162d195f7a532244b06d43d89a387}{isRealtimeAction}}(\mbox{\hyperlink{struct_command}{Command}} command);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{comment}{// map for key and action binding}}
+\DoxyCodeLine{53     std::map<int, Action> \mbox{\hyperlink{class_player_a2f56acba4afb6295afffd15b12f35a78}{mKeyBinding}};}
+\DoxyCodeLine{54     std::map<Action, Command> \mbox{\hyperlink{class_player_a66a22f216029822a0ea076ef0151b5bb}{mActionBinding}};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{comment}{// player commands}}
+\DoxyCodeLine{57     \mbox{\hyperlink{struct_command}{Command}} \mbox{\hyperlink{class_player_ab74f1955df11bd40f0f283d6a34d6977}{moveLeft}};}
+\DoxyCodeLine{58     \mbox{\hyperlink{struct_command}{Command}} \mbox{\hyperlink{class_player_a50d59992cb1975b1f83842f8a5a41b3d}{moveRight}};}
+\DoxyCodeLine{59     \mbox{\hyperlink{struct_command}{Command}} \mbox{\hyperlink{class_player_a1e9a3a6fecca6721c4796e7df554804f}{moveForward}};}
+\DoxyCodeLine{60     \mbox{\hyperlink{struct_command}{Command}} \mbox{\hyperlink{class_player_a455125d3e6f8603cb5da6335e5027f70}{moveBackward}};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \};}
+\DoxyCodeLine{63 }
+
+\end{DoxyCode}

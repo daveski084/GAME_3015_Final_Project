@@ -1,0 +1,33 @@
+\hypertarget{_game_state_8h_source}{}\doxysection{Game\+State.\+h}
+\label{_game_state_8h_source}\index{C:/Users/david/Downloads/GAME\_3015\_Final\_Project-\/main/GAME\_3015\_Final\_Project-\/main/EngineProject/EngineProject/GameState.h@{C:/Users/david/Downloads/GAME\_3015\_Final\_Project-\/main/GAME\_3015\_Final\_Project-\/main/EngineProject/EngineProject/GameState.h}}
+\mbox{\hyperlink{_game_state_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_state_8h}{State.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_player_8h}{Player.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_world_8h}{World.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_game_state}{GameState}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_state}{State}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_game_state_a05f2b11b65c32912f95c06d68b8bd4c4}{GameState}}(\mbox{\hyperlink{class_state_stack}{StateStack}}* stack, \mbox{\hyperlink{struct_state_1_1_context}{Context}}* context);}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_state_a3c511417d8934943ae65c04681f321a3}{draw}}();}
+\DoxyCodeLine{13     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_game_state_ac0bea22df7996fa7dd05520ff46199de}{update}}(\textcolor{keyword}{const} GameTimer\& gt);}
+\DoxyCodeLine{14     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_game_state_aebcbccf8a184f5444758320061ba5cc9}{handleEvent}}(WPARAM btnState);}
+\DoxyCodeLine{15     }
+\DoxyCodeLine{16 \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_game}{Game}}* \mbox{\hyperlink{class_game_state_a3f9097e38dea3ce918dbe2486137e429}{mGame}};}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_aircraft}{Aircraft}}* \mbox{\hyperlink{class_game_state_a2715d2cb72c9bfb82824fef513dd49d2}{mPlayerAircraft}};}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_sprite_node}{SpriteNode}}*   \mbox{\hyperlink{class_game_state_a0a5cfb6ed7fb101ab75b454fd8fb0e1b}{mBackground}}; }
+\DoxyCodeLine{20     \mbox{\hyperlink{class_aircraft}{Aircraft}}* \mbox{\hyperlink{class_game_state_a38ecfa3ad90b50f3ea7a086250e238ef}{mEnemy}};}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_world}{World}} \mbox{\hyperlink{class_game_state_abae3784758f93e8affba727139d51455}{mWorld}};}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_player}{Player}}\& \mbox{\hyperlink{class_game_state_a3c1361355e681344c884f5ead1ed23bf}{mPlayer}};}
+\DoxyCodeLine{23     XMFLOAT3 \mbox{\hyperlink{class_game_state_afae28d5ad23c9c563dd86a0422953826}{aircraftSize}};}
+\DoxyCodeLine{24     XMFLOAT3 \mbox{\hyperlink{class_game_state_a80daf08d7ea7bb6cbafe4ba96c546f4b}{enemySize}};}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_command_queue}{CommandQueue}} \mbox{\hyperlink{class_game_state_a185459dc620084f611c1dc60d8eb277a}{cQueue}};}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+
+\end{DoxyCode}

@@ -1,0 +1,77 @@
+\hypertarget{_state_8h_source}{}\doxysection{State.\+h}
+\label{_state_8h_source}\index{C:/Users/david/Downloads/GAME\_3015\_Final\_Project-\/main/GAME\_3015\_Final\_Project-\/main/EngineProject/EngineProject/State.h@{C:/Users/david/Downloads/GAME\_3015\_Final\_Project-\/main/GAME\_3015\_Final\_Project-\/main/EngineProject/EngineProject/State.h}}
+\mbox{\hyperlink{_state_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_scene_node_8h}{SceneNode.h}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_world}{World}};}
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_state_stack}{StateStack}};}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_states}{States}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3}{ID}}}
+\DoxyCodeLine{12     \{}
+\DoxyCodeLine{13         \mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3ae18ebe696f4559ff77e50030089b4787}{None}},}
+\DoxyCodeLine{14         \mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3abe3968e68fb767032bf86cf4b08cb9e4}{Title}},}
+\DoxyCodeLine{15         \mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3a3d097da841211f87096e55962a1bd73f}{Menu}},}
+\DoxyCodeLine{16         \mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3a392b686639cb98b586bf0af7dc993633}{Game}},}
+\DoxyCodeLine{17         \mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3a2ab6dc64ee021d85a7be33ed811329df}{Loading}},}
+\DoxyCodeLine{18         \mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3a7cbdc18ae28451f619eac360e384790a}{Pause}}}
+\DoxyCodeLine{19     \};}
+\DoxyCodeLine{20 \}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{class }\mbox{\hyperlink{class_state}{State}}}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \textcolor{keyword}{typedef} std::unique\_ptr<State> \mbox{\hyperlink{class_state_a71d9930be1a58be7f711e245b7965d48}{Ptr}};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{comment}{// context for each state object}}
+\DoxyCodeLine{29     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_state_1_1_context}{Context}}}
+\DoxyCodeLine{30     \{}
+\DoxyCodeLine{31         \mbox{\hyperlink{struct_state_1_1_context_a16f8ae4dd4a003b9a4b7fd22455b203f}{Context}}(\mbox{\hyperlink{class_player}{Player}}\& \mbox{\hyperlink{struct_state_1_1_context_a1c98434687748acdebf78fd80a4767ad}{player}}, \mbox{\hyperlink{class_game}{Game}}\& \mbox{\hyperlink{struct_state_1_1_context_a3fd6b76972ddb3303602df2eaa98a8e9}{game}});}
+\DoxyCodeLine{32         \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_state_1_1_context_ab4411f5e10a42fd4f581f63794cc2533}{BuildWorld}}();}
+\DoxyCodeLine{33         }
+\DoxyCodeLine{34         \mbox{\hyperlink{class_game}{Game}}* \mbox{\hyperlink{struct_state_1_1_context_a3fd6b76972ddb3303602df2eaa98a8e9}{game}};}
+\DoxyCodeLine{35         \mbox{\hyperlink{class_player}{Player}}* \mbox{\hyperlink{struct_state_1_1_context_a1c98434687748acdebf78fd80a4767ad}{player}};}
+\DoxyCodeLine{36     \};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \mbox{\hyperlink{class_state_a56e553adc0a9d1ae254c4987d7959e80}{State}}(\mbox{\hyperlink{class_state_stack}{StateStack}}* stack, \mbox{\hyperlink{struct_state_1_1_context}{Context}}* context);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_state_afab438d92b90dc18d194dbd9c9c8bab3}{\string~State}}();}
+\DoxyCodeLine{41     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_ae261605bc40b7e3959ce5df5457e4942}{draw}}() = 0 ;}
+\DoxyCodeLine{42     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_state_a3edbdcd142b9da8470d1f7d3fbe74e83}{update}}(\textcolor{keyword}{const} GameTimer\& gt) = 0;}
+\DoxyCodeLine{43     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_state_a3b119f64a399bd17bf37c377a094906a}{handleEvent}}(WPARAM btnState) = 0;}
+\DoxyCodeLine{44     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_state_a4478b6af851f0cd91ee9c2921f5255c5}{UpdateObjectCB}}();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{comment}{// get render item list}}
+\DoxyCodeLine{47     std::vector<std::unique\_ptr<RenderItem>>\& \mbox{\hyperlink{class_state_a2ad4d797a56e5ac8b2984a0c1ee306df}{getRenderItems}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_state_a505581614dd080700cda88bd1b930960}{mAllRitems}}; \}}
+\DoxyCodeLine{48     }
+\DoxyCodeLine{49     \textcolor{comment}{// scene graph}}
+\DoxyCodeLine{50     std::unique\_ptr<SceneNode> \mbox{\hyperlink{class_state_a41a93dcd04a21a7978db91329d10b6d3}{mSceneGraph}};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{comment}{// return state context}}
+\DoxyCodeLine{53     \mbox{\hyperlink{struct_state_1_1_context}{Context}}* \mbox{\hyperlink{class_state_abe550429014cc7efbb44c216ba54feef}{getContext}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{56     \textcolor{comment}{// manipulation method}}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_a6763de833ceb9c23df45aff163a4a1cd}{requestStackPush}}(\mbox{\hyperlink{namespace_states_a571a0dc62822f97bb9511eb013d8e1c3}{States::ID}} stateID);}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_aa418660892d6161772c907bd8d70f910}{requestStackPop}}();}
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_state_a4b602bed9bf0179ee5f6748fce340ae6}{requestStateClear}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \mbox{\hyperlink{struct_state_1_1_context}{Context}}* \mbox{\hyperlink{class_state_aa800112d4ab036b690e8db72c21d7a4b}{mContext}};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{comment}{// List of all the render items.}}
+\DoxyCodeLine{64     std::vector<std::unique\_ptr<RenderItem>> \mbox{\hyperlink{class_state_a505581614dd080700cda88bd1b930960}{mAllRitems}};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{keyword}{private}:}
+\DoxyCodeLine{68     \mbox{\hyperlink{class_state_stack}{StateStack}}* \mbox{\hyperlink{class_state_af0424dd012cc1ceb6e0f416982aa9228}{mStack}};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \};}
+\DoxyCodeLine{71 }
+
+\end{DoxyCode}
